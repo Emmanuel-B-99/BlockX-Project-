@@ -1,0 +1,70 @@
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  gap: 1em;
+  grid-auto-rows: minmax(100px, auto);
+  transition: opacity 0.5s, visibility 0.5s;
+  transition-duration: 0.7s;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2;
+  grid-row: 1;
+}
+.three {
+  grid-column: 3;
+  grid-row: 1;
+}
+.four {
+  grid-column: 4;
+  grid-row: 1;
+}
+.five {
+  grid-column: 1;
+  grid-row: 2;
+}
+.six {
+  grid-column: 2;
+  grid-row: 2;
+}
+.seven {
+  grid-column: 3;
+  grid-row: 2;
+}
+.eight {
+  grid-column: 4;
+  grid-row: 2;
+}
+.itemImage img {
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1em;
+  margin-bottom: -2.5em;
+}
+
+.itemText {
+  opacity: 0%;
+  color: darkgreen;
+  position: relative;
+  padding-left: 1em;
+  border-radius: 1em;
+  padding-bottom: 0;
+  background: linear-gradient(
+    #d3d3d3,
+    #d3d3d3,
+    #d3d3d3,
+    #d3d3d3,
+    #d3d3d3,
+    #d3d3d3
+  );
+  transition-duration: 0.7s;
+}
+
+.itemImage:hover + .itemText {
+  opacity: 100%;
+  pointer-events: none;
+}
